@@ -1,11 +1,13 @@
-import {
-  IonApp,
-  setupIonicReact,
-} from "@ionic/react";
- 
+// App.tsx
+
+import React from "react";
+import { IonApp, IonFooter, setupIonicReact } from "@ionic/react";
 import { Route } from "react-router-dom";
-import Home from "./pages/Home";
+import { Login, Home, Search, Mapa } from "./pages";
  
+import { IonReactRouter } from "@ionic/react-router";
+import { NavBar } from "./components/common";
+
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
 
@@ -24,7 +26,6 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 import "./theme/variables.css";
-import { IonReactRouter } from "@ionic/react-router";
 
 setupIonicReact();
 
@@ -32,10 +33,22 @@ const App: React.FC = () => {
   return (
     <IonApp>
       <IonReactRouter>
+   
         <Route exact path="/">
-        <Home />
+          <Home />
         </Route>
- 
+        <Route exact path="/search">
+          <Search />
+        </Route>
+        <Route exact path="/mapa">
+          <Mapa />
+        </Route>
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        <IonFooter/>
+      
+        <NavBar/>
       </IonReactRouter>
     </IonApp>
   );
