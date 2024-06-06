@@ -1,0 +1,56 @@
+.loginContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginContainer {
+  text-align: center;
+  padding: 10%;
+  background: var(--ion-color-warning);
+  height: 100%;
+}
+.loginItems {
+  margin: 10% 0;
+}
+.loginTitles {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.loginLogo {
+  width: 150px;
+  height: 150px;
+
+  margin: 20px auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 10px 0 20px 0;
+}
+
+.createButton {
+  margin-top: 10%;
+}
+
+.socialLoginButton {
+  width: 70px;
+  background-color: aliceblue;
+  border-radius: 99px;
+}
+.loginButtons {
+  display: flex;
+  justify-content: space-around;
+  width: 250px;
+  margin: 0 auto;
+}
+.emailLoginButton {
+  margin-bottom: 10px;
+}
