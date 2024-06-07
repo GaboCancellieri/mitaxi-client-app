@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { IonTabBar, IonTabButton, IonIcon, IonLabel, IonFooter } from "@ionic/react";
 import { homeOutline, searchOutline, notificationsOutline, personOutline } from "ionicons/icons";
 import { useHistory, useLocation } from "react-router-dom";
-
+import { Typography } from "../index";
 const NavBar: React.FC = () => {
   const history = useHistory();
   const location = useLocation();
@@ -38,19 +38,19 @@ const NavBar: React.FC = () => {
       <IonTabBar slot="bottom">
         <IonTabButton tab="home" onClick={() => navigateTo("/", "home")} selected={activeTab === "home"}>
           <IonIcon icon={homeOutline} />
-          <IonLabel>Home</IonLabel>
+       
         </IonTabButton>
         <IonTabButton tab="search" onClick={() => navigateTo("/search", "search")} selected={activeTab === "search"}>
           <IonIcon icon={searchOutline} />
-          <IonLabel>Search</IonLabel>
+ 
         </IonTabButton>
         <IonTabButton tab="notifications" onClick={() => navigateTo("/notifications", "notifications")} selected={activeTab === "notifications"}>
           <IonIcon icon={notificationsOutline} />
-          <IonLabel>Notifications</IonLabel>
+ 
         </IonTabButton>
         <IonTabButton tab="messages" onClick={() => navigateTo("/messages", "messages")} selected={activeTab === "messages"}>
           <IonIcon icon={personOutline} />
-          <IonLabel>Profile</IonLabel>
+    
         </IonTabButton>
       </IonTabBar>
     </IonFooter>
