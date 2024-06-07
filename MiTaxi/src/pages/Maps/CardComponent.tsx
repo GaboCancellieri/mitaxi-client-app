@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {
   IonCard, IonCardContent, IonButton, IonCheckbox, IonTextarea, IonItem,
 } from '@ionic/react';
-
+import { Typography } from '../../components/common';
 interface CardProps {
   isOpen: boolean;
   onClose: () => void;
@@ -40,20 +40,20 @@ const CardComponent: React.FC<CardProps> = ( ) => {
     <div style={{ position: 'fixed', bottom: 60, left: 0, right: 0, zIndex: 999 }}>
       <IonCard >
         <IonCardContent>
-          <h2>Opciones Adicionales</h2>
+          <Typography variant='smallTitle'>Opciones Adicionales</Typography>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <IonItem>
-              <IonCheckbox checked={checkbox1} onIonChange={handleCheckbox1Change}>¿Llevas equipaje?</IonCheckbox>
+              <IonCheckbox checked={checkbox1} onIonChange={handleCheckbox1Change}>     <Typography variant='text'>¿Llevas equipaje?</Typography> </IonCheckbox>
             </IonItem>
             <IonItem>
-              <IonCheckbox checked={checkbox2} onIonChange={handleCheckbox2Change}>¿Llevas una mascota?</IonCheckbox>
+              <IonCheckbox checked={checkbox2} onIonChange={handleCheckbox2Change}> <Typography variant='text'>¿Llevas una mascota?</Typography> </IonCheckbox>
             </IonItem>
             <IonItem>
-              <IonCheckbox checked={checkbox3} onIonChange={handleCheckbox3Change}>¿Llevas una bicicleta?</IonCheckbox>
+              <IonCheckbox checked={checkbox3} onIonChange={handleCheckbox3Change}> <Typography variant='text'>¿Llevas una bicicleta?</Typography> </IonCheckbox>
             </IonItem>
             <IonItem>
               <div style={{ marginTop: '15px' }}>
-                <span>¿Tienes alguna información extra que debamos saber?</span>
+                <Typography variant='text'>¿Tienes alguna información extra que debamos saber?</Typography> 
                 <IonTextarea value={textareaValue} onIonChange={handleTextareaChange} placeholder="Escribe algo..." />
               </div>
             </IonItem>

@@ -4,11 +4,12 @@ import classNames from "classnames";
 
 type TypographyProps = {
   variant:
-    | "largeTitle"
+     | "largeTitle"
     | "title"
     | "smallTitle"
     | "smallerTitle"
     | "subtitle"
+    | "menu"
     | "text"
     | "darkButtonText"
     | "buttonText"

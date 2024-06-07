@@ -2,5 +2,13 @@
 {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+
+padding: 0 50px;
 }
+
+ .homeContent{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+ }

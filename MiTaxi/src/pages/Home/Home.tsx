@@ -8,9 +8,11 @@ import {
   IonTitle,
   IonCard,
 } from "@ionic/react";
-import maps from '../../../public/images/maps.png';
-import styles from './home.module.scss';
-
+import maps from "../../../public/images/maps.png";
+import styles from "./home.module.scss";
+import { Typography } from "../../components/common";
+import AccessShortcuts from "./components/AccessShortcut";
+import Features from "./components/Features";
 const Home: React.FC = () => {
   const history = useHistory();
 
@@ -21,15 +23,26 @@ const Home: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-      <IonToolbar color="primary">
+        <IonToolbar color="primary">
           <IonTitle>Home</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent className="ion-padding">
+
+      <IonContent>
+      <div className="ion-padding">
+          <Typography variant="smallTitle">Titulo no se </Typography>
+        </div>
         <IonCard className={styles.viaje} onClick={handleCardClick}>
-          <p>¿A dónde quieres ir?</p>
-          <img src={maps} alt="imagen Google Maps" style={{width:'100px'}} />
+          <Typography variant="smallTitle">¿A dónde quieres ir?</Typography>
+          <img src={maps} alt="imagen Google Maps" style={{ width: "100px" }} />
         </IonCard>
+        <div className="ion-padding">
+          <Typography variant="smallTitle">Accesos directos</Typography>
+        </div>
+        <AccessShortcuts />
+        <Features />
+        <IonContent>
+        </IonContent>
       </IonContent>
     </IonPage>
   );
